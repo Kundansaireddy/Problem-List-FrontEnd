@@ -1,0 +1,268 @@
+/* App */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-color: white;
+  background: linear-gradient(
+    to bottom right,
+    rgb(242, 165, 63) 50%,
+    rgb(242, 200, 100) 50%
+  );
+}
+
+.app__content {
+  flex-grow: 1;
+  display: flex;
+  overflow-y: auto;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 99%;
+  margin-bottom: 10px;
+}
+
+.app__sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  max-height: 100%;
+  width: 50%;
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+}
+
+.app__input {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.app__button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.app__button:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.app__button_disabled {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff6969;
+  color: #fff;
+  border: 1px solid black;
+  cursor: not-allowed;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.errorShow {
+  font-size: xx-small;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.app__user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.displayNameButton {
+  width: 100%;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.displayNameButton:hover {
+  background-color: #9bcdd2;
+}
+
+.app__user-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.app__problem-list {
+  position: relative;
+  flex-grow: 1;
+  border: 2px solid black;
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  max-height: 100%;
+  margin-left: 3px;
+}
+
+.app__problem-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__problem-list li {
+  margin-bottom: 10px;
+}
+
+.app__problem-list a {
+  text-decoration: none;
+  color: #333;
+}
+.app__problem-list a:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.app__message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.app__above_message {
+  margin-bottom: 10px;
+}
+.app__title {
+  font-size: 24px;
+}
+
+.problemCount {
+  left: 0px;
+}
+.app__navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.leetmate {
+  font-size: 80px;
+  font-style: bold;
+  margin-right: auto;
+}
+
+.problemCount {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff6969;
+  border: 1px solid black;
+  color: #fff;
+  border-radius: 4px;
+  cursor: default;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid black;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ff6969;
+  background-color: rgb(242, 165, 63);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2.5px solid black;
+  background-color: #4caf50;
+  background-color: white;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.app__navbar .leetmate {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.app__navbar .problemCount {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+/* App */
+.app {
+  display: flex;
+  flex-direction: row; /* Change from column to row */
+  height: 100vh;
+  align-items: stretch; /* Stretch items vertically */
+  background-color: white;
+  background: linear-gradient(
+    to bottom right,
+    rgb(242, 165, 63) 50%,
+    rgb(242, 200, 100) 50%
+  );
+}
+
+.app__sidebar {
+  width: 30%;
+}
+
+.app__problem-list {
+  flex-grow: 1;
+}
+.app {
+  position: relative; /* Set to relative so child absolute positioned elements are relative to this */
+  padding: 5%; /* Top, Right, Bottom, Left */
+}
+
+.app__navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Set a high value for the z-index */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px; /* Added padding for better appearance */
+}
+/* Reset body and HTML margins and padding */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* ... existing styles ... */
+
+.app {
+  position: relative;
+  height: 100vh; /* Set height to 100% of viewport height */
+  width: 100%; /* Set width to 100% of viewport width */
+  box-sizing: border-box; /* Ensure padding is included in the total width and height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* ... remaining styles ... */
