@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/collections")
+      .get("https://fetch-questions.onrender.com/collections")
       .then((response) => {
         setCollections(response.data.sort());
       })
@@ -22,7 +22,7 @@ function App() {
   const fetchCollectionData = (collectionName) => {
     setSelectedCollection(collectionName);
     axios
-      .get(`http://localhost:3001/collections/${collectionName}`)
+      .get(`https://fetch-questions.onrender.com/collections/${collectionName}`)
       .then((response) => {
         setCollectionData(response.data);
       })
